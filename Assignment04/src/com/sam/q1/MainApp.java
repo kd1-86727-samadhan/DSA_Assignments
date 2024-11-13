@@ -93,6 +93,12 @@ public class MainApp {
 			}
 			break;
 
+			case 8: {
+				lt.deleteAll();
+				lt.display();
+			}
+			break;
+
 			default:
 				System.out.println("Invalid Choice !!!!");
 				break;

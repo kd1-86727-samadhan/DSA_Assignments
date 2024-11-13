@@ -108,13 +108,12 @@ public class StackUsingSinglyCircularLL {
 
 		else if (size == 1) {
 			tail = null;
-			return;
 		} else {
 			Node trav = tail.next;
-			while (trav.next != tail) {
+			do {
 				trav = trav.next;
-			}
-			tail.next = tail.next;
+			} while (trav.next != tail);
+			trav.next = tail.next;
 			tail = trav;
 		}
 		size--;
